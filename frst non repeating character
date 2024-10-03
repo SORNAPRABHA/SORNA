@@ -1,0 +1,21 @@
+def firstnonrepeating(a):
+   
+    counts = [0] * 26
+
+   
+    for char in a:
+        index = ord(char) - ord('a')  
+        counts[index] += 1
+
+   
+    for char in a:
+        index = ord(char) - ord('a')
+        if counts[index] == 1:  
+            return char  
+
+    return None  
+
+
+input_string = "haaashhh"
+result = firstnonrepeating(input_string)
+print("The first non repeating character is",result) 
